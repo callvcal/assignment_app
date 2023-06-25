@@ -1,3 +1,4 @@
+import 'package:callvcal/page_2.dart';
 import 'package:flutter/material.dart';import 'package:getwidget/getwidget.dart';
 
 class Page_6 extends StatefulWidget {
@@ -70,7 +71,29 @@ class _Page_6State extends State<Page_6> {
                     ],)
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 140,),
+              GestureDetector(
+                onTap: ()=> {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Page_2()),)
+                },
+                child: Container(
+                  height: 80.0,
+                  width: 130.0,
+                  color: Colors.transparent,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                      child: new Center(
+                        child: new Text("Next",
+                          style: TextStyle(color: Colors.black, fontSize: 22),
+                          textAlign: TextAlign.center,),
+                      )),
+                ),
+              ),
             ]
         ),
       ),
